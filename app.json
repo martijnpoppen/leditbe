@@ -1,0 +1,156 @@
+{
+	"id": "nl.fellownet.leditbe",
+	"version": "1.0.0",
+	"compatibility": ">=1.5.0",
+	"sdk": 2,
+	"name": {
+		"en": "Led It Be"
+	},
+	"description": {
+		"en": "Adds a screensaver that can be configured using flows.",
+		"nl": "Voegt een screensaver toe welke geconfigureerd kan worden door middel van flows."
+	},
+	"category": [
+		"tools"
+	],
+	"permissions": [
+		"homey:manager:ledring"
+	],
+	"images": {
+		"large": "/assets/images/large.png",
+		"small": "/assets/images/small.png"
+	},
+	"author": {
+		"name": "Bob Kersten",
+		"email": "bob@fellownet.nl"
+	},
+	"flow": {
+		"actions": [
+			{
+				"id": "solid",
+				"title": {
+					"en": "Solid color",
+					"nl": "Vaste kleur"
+				},
+				"args": [
+					{
+						"type": "color",
+						"name": "color",
+						"title": {
+							"en": "Color",
+							"nl": "Kleur"
+						}
+					}
+				]
+			},
+			{
+				"id": "flash",
+				"title": {
+					"en": "Flash",
+					"nl": "Flits"
+				},
+				"args": [
+					{
+						"type": "color",
+						"name": "color_1",
+						"title": {
+							"en": "First color",
+							"nl": "Eerste kleur"
+						}
+					},
+					{
+						"type": "color",
+						"name": "color_2",
+						"title": {
+							"en": "Second color",
+							"nl": "Tweede kleur"
+						}
+					}
+				]
+			},
+			{
+				"id": "stroboscope",
+				"title": {
+					"en": "Stroboscope",
+					"nl": "Stroboscoop"
+				},
+				"args": [
+					{
+						"type": "color",
+						"name": "color_1",
+						"title": {
+							"en": "First color",
+							"nl": "Eerste kleur"
+						}
+					},
+					{
+						"type": "color",
+						"name": "color_2",
+						"title": {
+							"en": "Second color",
+							"nl": "Tweede kleur"
+						}
+					}
+				]
+			},
+			{
+				"id": "lighthouse",
+				"title": {
+					"en": "Lighthouse",
+					"nl": "Vuurtoren"
+				},
+				"args": [
+					{
+						"type": "color",
+						"name": "color_1",
+						"title": {
+							"en": "First color",
+							"nl": "Eerste kleur"
+						}
+					},
+					{
+						"type": "color",
+						"name": "color_2",
+						"title": {
+							"en": "Second color",
+							"nl": "Tweede kleur"
+						}
+					}
+				]
+			},
+			{
+				"id": "searchlight",
+				"title": {
+					"en": "Searchlight",
+					"nl": "Zoeklicht"
+				},
+				"args": [
+					{
+						"type": "color",
+						"name": "color_1",
+						"title": {
+							"en": "First color",
+							"nl": "Eerste kleur"
+						}
+					},
+					{
+						"type": "color",
+						"name": "color_2",
+						"title": {
+							"en": "Second color",
+							"nl": "Tweede kleur"
+						}
+					}
+				]
+			}
+		]
+	},
+	"screensavers": [
+		{
+			"name": "leditbe",
+			"title": {
+				"en": "Led It Be"
+			}
+		}
+	]
+}
