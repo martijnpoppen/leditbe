@@ -1,15 +1,14 @@
 'use strict';
 
-const Homey           = require( 'homey' );
-const Generator       = require('./lib/generator.js');
-const Helper          = require('./lib/helper.js');
+const Homey     = require( 'homey' );
+const Generator = require('./lib/generator.js');
+const Helper    = require('./lib/helper.js');
 
 const { ManagerSettings } = Homey;
 
 const LAST_SETTING_KEY = 'last_animation_frames';
 
 class LedItBeApp extends Homey.App {
-	
 	onInit() {
 		var self = this;
 
@@ -67,6 +66,16 @@ class LedItBeApp extends Homey.App {
 				let rgb_1 = Helper.hexToRgb(args.color_1);
 				let rgb_2 = Helper.hexToRgb(args.color_2);
 				return self.registerAnimation(Generator.createSearchlightAnimation(rgb_1, rgb_2));
+			})
+		;
+
+		let butterflyAction = new Homey.FlowCardAction('butterfly');
+		butterflyAction
+			.register()
+			.registerRunListener((args, state) => {
+				let rgb_1 = Helper.hexToRgb(args.color_1);
+				let rgb_2 = Helper.hexToRgb(args.color_2);
+				return self.registerAnimation(Generator.createButterflyAnimation(rgb_1, rgb_2));
 			})
 		;
 

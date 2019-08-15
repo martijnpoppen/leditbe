@@ -142,6 +142,31 @@
 						}
 					}
 				]
+			},
+			{
+				"id": "butterfly",
+				"title": {
+					"en": "Butterfly",
+					"nl": "Vlinder"
+				},
+				"args": [
+					{
+						"type": "color",
+						"name": "color_1",
+						"title": {
+							"en": "First color",
+							"nl": "Eerste kleur"
+						}
+					},
+					{
+						"type": "color",
+						"name": "color_2",
+						"title": {
+							"en": "Second color",
+							"nl": "Tweede kleur"
+						}
+					}
+				]
 			}
 		]
 	},
