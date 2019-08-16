@@ -25,3 +25,7 @@ If you like this project, perhaps you can support us by making a donation?
 ### v1.0.0
 
 * First public release.
+
+### v1.0.1
+
+* Added butterfly animation.
