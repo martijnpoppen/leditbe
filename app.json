@@ -10,9 +10,14 @@
 		"en": "Adds a screensaver that can be configured using flows.",
 		"nl": "Voegt een screensaver toe welke geconfigureerd kan worden door middel van flows."
 	},
+	"brandColor": "#86C351",
 	"category": [
 		"tools"
 	],
+	"tags": {
+        "en": [ "led", "ledring", "screensaver" ],
+        "nl": [ "led", "ledring", "screensaver" ]
+    },
 	"permissions": [
 		"homey:manager:ledring"
 	],
@@ -21,9 +26,17 @@
 		"small": "/assets/images/small.png"
 	},
 	"author": {
-		"name": "Bob Kersten",
+		"name": "Fellownet",
 		"email": "bob@fellownet.nl"
 	},
+	"contributors": {
+        "developers": [
+            {
+                "name": "Bob Kersten",
+                "email": "bob@fellownet.nl"
+            }
+        ]
+    },
 	"flow": {
 		"actions": [
 			{
