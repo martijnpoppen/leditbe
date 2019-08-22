@@ -1,6 +1,6 @@
 {
 	"id": "nl.fellownet.leditbe",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"compatibility": ">=1.5.0",
 	"sdk": 2,
 	"name": {
@@ -15,9 +15,10 @@
 		"tools"
 	],
 	"tags": {
-        "en": [ "led", "ledring", "screensaver" ],
-        "nl": [ "led", "ledring", "screensaver" ]
-    },
+		"en": [ "led", "ledring", "screensaver" ],
+		"nl": [ "led", "ledring", "screensaver" ]
+	},
+	"homeyCommunityTopicId": 17191,
 	"permissions": [
 		"homey:manager:ledring"
 	],
@@ -30,13 +31,13 @@
 		"email": "bob@fellownet.nl"
 	},
 	"contributors": {
-        "developers": [
-            {
-                "name": "Bob Kersten",
-                "email": "bob@fellownet.nl"
-            }
-        ]
-    },
+		"developers": [
+			{
+				"name": "Bob Kersten",
+				"email": "bob@fellownet.nl"
+			}
+		]
+	},
 	"flow": {
 		"actions": [
 			{

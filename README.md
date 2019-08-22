@@ -22,10 +22,17 @@ If you like this project, perhaps you can support us by making a donation?
 
 ## Changelog
 
-### v1.0.0
+### v1.0.2
 
-* First public release.
+* Linked app to community forum.
+* Tweaks to the authors section of the manifest.
+* Changed the app icon.
 
 ### v1.0.1
 
 * Added butterfly animation.
+
+### v1.0.0
+
+* First public release.
+

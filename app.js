@@ -1,14 +1,14 @@
 'use strict';
 
-const Homey     = require( 'homey' );
+const Homey = require( 'homey' );
 const Generator = require('./lib/generator.js');
-const Helper    = require('./lib/helper.js');
+const Helper = require('./lib/helper.js');
 
 const { ManagerSettings } = Homey;
 
 const LAST_SETTING_KEY = 'last_animation_frames';
 
-class LedItBeApp extends Homey.App {
+class LedItBe extends Homey.App {
 	onInit() {
 		var self = this;
 
@@ -136,4 +136,4 @@ class LedItBeApp extends Homey.App {
 	}
 }
 
-module.exports = LedItBeApp;
+module.exports = LedItBe;
