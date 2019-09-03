@@ -15,7 +15,7 @@ visible once the screensaver kicks in, and keep on running while the screensaver
 
 ## Contributing
 
-To submit a bug report, please create an [issue at GitHub](https://github.com/fellownet/leditbe/issues/new).
+To submit a bug report or feature request, please create an [issue at GitHub](https://github.com/fellownet/leditbe/issues/new).
 
 If you'd like to contribute code to this project, please read the
 [CONTRIBUTING.md](https://github.com/fellownet/leditbe/blob/master/CONTRIBUTING.md) document.
