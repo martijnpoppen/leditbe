@@ -31,6 +31,10 @@ Application image by [Paola Galimberti](https://unsplash.com/@paolaccia?utm_sour
 
 ## Changelog
 
+### v1.0.3
+
+* Updated several flow descriptions.
+
 ### v1.0.2
 
 * Linked app to community forum.
