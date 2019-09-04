@@ -34,6 +34,7 @@ Application image by [Paola Galimberti](https://unsplash.com/@paolaccia?utm_sour
 ### v1.0.3
 
 * Updated several flow descriptions.
+* Color correction for better rgb accuracy.
 
 ### v1.0.2
 
