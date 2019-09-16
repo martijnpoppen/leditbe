@@ -7,16 +7,16 @@
 		"en": "Led It Be"
 	},
 	"description": {
-		"en": "Adds a screensaver that can be configured using flows.",
-		"nl": "Voegt een screensaver toe welke geconfigureerd kan worden door middel van flows."
+		"en": "Adds a screensaver to your Homey that can be configured using flows.",
+		"nl": "Voegt een screensaver aam je Homey toe welke geconfigureerd kan worden door middel van flows."
 	},
 	"brandColor": "#86C351",
 	"category": [
-		"tools"
+		"tools", "lights"
 	],
 	"tags": {
-		"en": [ "led", "ledring", "screensaver", "animation" ],
-		"nl": [ "led", "ledring", "screensaver", "animation" ]
+		"en": [ "led", "ledring", "ring", "screensaver", "animation" ],
+		"nl": [ "led", "ledring", "ring", "screensaver", "animation" ]
 	},
 	"homeyCommunityTopicId": 17191,
 	"permissions": [
