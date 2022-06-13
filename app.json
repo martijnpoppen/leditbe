@@ -1,20 +1,20 @@
 {
   "id": "nl.fellownet.leditbe",
-  "version": "1.0.5",
-  "compatibility": ">=2.1.0",
+  "version": "1.0.6",
+  "compatibility": ">=1.5.0",
   "sdk": 2,
+  "platforms": [
+    "local"
+  ],
+  "brandColor": "#000000",
   "name": {
-    "en": "Led It Be"
+    "en": "Led It Be",
+    "nl": "Led It Be"
   },
   "description": {
     "en": "Adds a screensaver to your Homey that can be configured using flows.",
     "nl": "Voegt een screensaver aam je Homey toe welke geconfigureerd kan worden door middel van flows."
   },
-  "brandColor": "#000000",
-  "category": [
-    "tools",
-    "lights"
-  ],
   "tags": {
     "en": [
       "led",
@@ -31,6 +31,9 @@
       "animation"
     ]
   },
+  "category": [
+    "tools"
+  ],
   "permissions": [
     "homey:manager:ledring"
   ],
@@ -75,6 +78,7 @@
   "source": "https://github.com/martijnpoppen/leditbe",
   "homeyCommunityTopicId": 64674,
   "support": "https://community.homey.app/64674",
+  "drivers": [],
   "flow": {
     "actions": [
       {
@@ -225,7 +229,8 @@
     {
       "name": "leditbe",
       "title": {
-        "en": "Led It Be"
+        "en": "Led It Be",
+        "nl": "Led It Be"
       }
     }
   ]
