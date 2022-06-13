@@ -1,197 +1,211 @@
 {
-	"id": "nl.fellownet.leditbe",
-	"version": "1.0.3",
-	"compatibility": ">=2.1.0",
-	"sdk": 2,
-	"name": {
-		"en": "Led It Be"
-	},
-	"description": {
-		"en": "Adds a screensaver to your Homey that can be configured using flows.",
-		"nl": "Voegt een screensaver aam je Homey toe welke geconfigureerd kan worden door middel van flows."
-	},
-	"brandColor": "#86C351",
-	"category": [
-		"tools", "lights"
-	],
-	"tags": {
-		"en": [ "led", "ledring", "ring", "screensaver", "animation" ],
-		"nl": [ "led", "ledring", "ring", "screensaver", "animation" ]
-	},
-	"homeyCommunityTopicId": 17191,
-	"permissions": [
-		"homey:manager:ledring"
-	],
-	"images": {
-		"large": "/assets/images/large.png",
-		"small": "/assets/images/small.png"
-	},
-	"author": {
-		"name": "Fellownet",
-		"email": "bob@fellownet.nl"
-	},
-	"contributors": {
-		"developers": [
-			{
-				"name": "Bob Kersten",
-				"email": "bob@fellownet.nl"
-			}
-		]
-	},
-
-	"flow": {
-		"actions": [
-			{
-				"id": "solid",
-				"title": {
-					"en": "Solid color",
-					"nl": "Vaste kleur"
-				},
-				"args": [
-					{
-						"type": "color",
-						"name": "color",
-						"title": {
-							"en": "Color",
-							"nl": "Kleur"
-						}
-					}
-				]
-			},
-			{
-				"id": "flash",
-				"title": {
-					"en": "Flash",
-					"nl": "Flits"
-				},
-				"args": [
-					{
-						"type": "color",
-						"name": "color_1",
-						"title": {
-							"en": "First color",
-							"nl": "Eerste kleur"
-						}
-					},
-					{
-						"type": "color",
-						"name": "color_2",
-						"title": {
-							"en": "Second color",
-							"nl": "Tweede kleur"
-						}
-					}
-				]
-			},
-			{
-				"id": "stroboscope",
-				"title": {
-					"en": "Stroboscope",
-					"nl": "Stroboscoop"
-				},
-				"args": [
-					{
-						"type": "color",
-						"name": "color_1",
-						"title": {
-							"en": "First color",
-							"nl": "Eerste kleur"
-						}
-					},
-					{
-						"type": "color",
-						"name": "color_2",
-						"title": {
-							"en": "Second color",
-							"nl": "Tweede kleur"
-						}
-					}
-				]
-			},
-			{
-				"id": "lighthouse",
-				"title": {
-					"en": "Lighthouse",
-					"nl": "Vuurtoren"
-				},
-				"args": [
-					{
-						"type": "color",
-						"name": "color_1",
-						"title": {
-							"en": "First color",
-							"nl": "Eerste kleur"
-						}
-					},
-					{
-						"type": "color",
-						"name": "color_2",
-						"title": {
-							"en": "Second color",
-							"nl": "Tweede kleur"
-						}
-					}
-				]
-			},
-			{
-				"id": "searchlight",
-				"title": {
-					"en": "Searchlight",
-					"nl": "Zoeklicht"
-				},
-				"args": [
-					{
-						"type": "color",
-						"name": "color_1",
-						"title": {
-							"en": "First color",
-							"nl": "Eerste kleur"
-						}
-					},
-					{
-						"type": "color",
-						"name": "color_2",
-						"title": {
-							"en": "Second color",
-							"nl": "Tweede kleur"
-						}
-					}
-				]
-			},
-			{
-				"id": "butterfly",
-				"title": {
-					"en": "Butterfly",
-					"nl": "Vlinder"
-				},
-				"args": [
-					{
-						"type": "color",
-						"name": "color_1",
-						"title": {
-							"en": "First color",
-							"nl": "Eerste kleur"
-						}
-					},
-					{
-						"type": "color",
-						"name": "color_2",
-						"title": {
-							"en": "Second color",
-							"nl": "Tweede kleur"
-						}
-					}
-				]
-			}
-		]
-	},
-
-	"screensavers": [
-		{
-			"name": "leditbe",
-			"title": {
-				"en": "Led It Be"
-			}
-		}
-	]
+  "id": "nl.fellownet.leditbe",
+  "version": "1.0.3",
+  "compatibility": ">=2.1.0",
+  "sdk": 2,
+  "name": {
+    "en": "Led It Be"
+  },
+  "description": {
+    "en": "Adds a screensaver to your Homey that can be configured using flows.",
+    "nl": "Voegt een screensaver aam je Homey toe welke geconfigureerd kan worden door middel van flows."
+  },
+  "brandColor": "#000000",
+  "category": ["tools", "lights"],
+  "tags": {
+    "en": ["led", "ledring", "ring", "screensaver", "animation"],
+    "nl": ["led", "ledring", "ring", "screensaver", "animation"]
+  },
+  "permissions": ["homey:manager:ledring"],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Martijn Poppen",
+        "email": "homey@martijnpoppen.nl"
+      },
+      {
+        "name": "Bob Kersten",
+        "email": "bob@fellownet.nl"
+      }
+    ],
+    "translators": [
+      {
+        "name": "🇬🇧 Martijn Poppen"
+      },
+      {
+        "name": "🇳🇱 Martijn Poppen"
+      }
+    ]
+  },
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "martijnpoppen"
+      }
+    }
+  },
+  "bugs": {
+    "url": "https://community.homey.app/64674"
+  },
+  "source": "https://github.com/martijnpoppen/leditbe",
+  "homeyCommunityTopicId": 64674,
+  "support": "https://community.homey.app/64674",
+  "flow": {
+    "actions": [
+      {
+        "id": "solid",
+        "title": {
+          "en": "Solid color",
+          "nl": "Vaste kleur"
+        },
+        "args": [
+          {
+            "type": "color",
+            "name": "color",
+            "title": {
+              "en": "Color",
+              "nl": "Kleur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "flash",
+        "title": {
+          "en": "Flash",
+          "nl": "Flits"
+        },
+        "args": [
+          {
+            "type": "color",
+            "name": "color_1",
+            "title": {
+              "en": "First color",
+              "nl": "Eerste kleur"
+            }
+          },
+          {
+            "type": "color",
+            "name": "color_2",
+            "title": {
+              "en": "Second color",
+              "nl": "Tweede kleur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "stroboscope",
+        "title": {
+          "en": "Stroboscope",
+          "nl": "Stroboscoop"
+        },
+        "args": [
+          {
+            "type": "color",
+            "name": "color_1",
+            "title": {
+              "en": "First color",
+              "nl": "Eerste kleur"
+            }
+          },
+          {
+            "type": "color",
+            "name": "color_2",
+            "title": {
+              "en": "Second color",
+              "nl": "Tweede kleur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "lighthouse",
+        "title": {
+          "en": "Lighthouse",
+          "nl": "Vuurtoren"
+        },
+        "args": [
+          {
+            "type": "color",
+            "name": "color_1",
+            "title": {
+              "en": "First color",
+              "nl": "Eerste kleur"
+            }
+          },
+          {
+            "type": "color",
+            "name": "color_2",
+            "title": {
+              "en": "Second color",
+              "nl": "Tweede kleur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "searchlight",
+        "title": {
+          "en": "Searchlight",
+          "nl": "Zoeklicht"
+        },
+        "args": [
+          {
+            "type": "color",
+            "name": "color_1",
+            "title": {
+              "en": "First color",
+              "nl": "Eerste kleur"
+            }
+          },
+          {
+            "type": "color",
+            "name": "color_2",
+            "title": {
+              "en": "Second color",
+              "nl": "Tweede kleur"
+            }
+          }
+        ]
+      },
+      {
+        "id": "butterfly",
+        "title": {
+          "en": "Butterfly",
+          "nl": "Vlinder"
+        },
+        "args": [
+          {
+            "type": "color",
+            "name": "color_1",
+            "title": {
+              "en": "First color",
+              "nl": "Eerste kleur"
+            }
+          },
+          {
+            "type": "color",
+            "name": "color_2",
+            "title": {
+              "en": "Second color",
+              "nl": "Tweede kleur"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "screensavers": [
+    {
+      "name": "leditbe",
+      "title": {
+        "en": "Led It Be"
+      }
+    }
+  ]
 }
