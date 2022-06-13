@@ -1,6 +1,6 @@
 {
   "id": "nl.fellownet.leditbe",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "compatibility": ">=2.1.0",
   "sdk": 2,
   "name": {
@@ -11,15 +11,36 @@
     "nl": "Voegt een screensaver aam je Homey toe welke geconfigureerd kan worden door middel van flows."
   },
   "brandColor": "#000000",
-  "category": ["tools", "lights"],
+  "category": [
+    "tools",
+    "lights"
+  ],
   "tags": {
-    "en": ["led", "ledring", "ring", "screensaver", "animation"],
-    "nl": ["led", "ledring", "ring", "screensaver", "animation"]
+    "en": [
+      "led",
+      "ledring",
+      "ring",
+      "screensaver",
+      "animation"
+    ],
+    "nl": [
+      "led",
+      "ledring",
+      "ring",
+      "screensaver",
+      "animation"
+    ]
   },
-  "permissions": ["homey:manager:ledring"],
+  "permissions": [
+    "homey:manager:ledring"
+  ],
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Martijn Poppen",
+    "email": "homey@martijnpoppen.nl"
   },
   "contributors": {
     "developers": [
