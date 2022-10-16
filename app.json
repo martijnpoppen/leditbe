@@ -1,9 +1,11 @@
 {
   "id": "nl.fellownet.leditbe",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
-  "platforms": ["local"],
+  "platforms": [
+    "local"
+  ],
   "brandColor": "#000000",
   "name": {
     "en": "Led It Be",
@@ -14,11 +16,27 @@
     "nl": "Voegt een screensaver aam je Homey toe welke geconfigureerd kan worden door middel van flows."
   },
   "tags": {
-    "en": ["led", "ledring", "ring", "screensaver", "animation"],
-    "nl": ["led", "ledring", "ring", "screensaver", "animation"]
+    "en": [
+      "led",
+      "ledring",
+      "ring",
+      "screensaver",
+      "animation"
+    ],
+    "nl": [
+      "led",
+      "ledring",
+      "ring",
+      "screensaver",
+      "animation"
+    ]
   },
-  "category": ["tools"],
-  "permissions": ["homey:manager:ledring"],
+  "category": [
+    "tools"
+  ],
+  "permissions": [
+    "homey:manager:ledring"
+  ],
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
@@ -73,9 +91,9 @@
           "nl": "Vaste kleur"
         },
         "titleFormatted": {
-            "en": "Solid color [[color]]",
-            "nl": "Vaste kleur [[color]]"
-          },
+          "en": "Solid color [[color]]",
+          "nl": "Vaste kleur [[color]]"
+        },
         "args": [
           {
             "type": "color",
@@ -94,9 +112,9 @@
           "nl": "Flits"
         },
         "titleFormatted": {
-            "en": "Flash [[color_1]] [[color_2]]",
-            "nl": "Flits [[color_1]] [[color_2]]"
-          },
+          "en": "Flash [[color_1]] [[color_2]]",
+          "nl": "Flits [[color_1]] [[color_2]]"
+        },
         "args": [
           {
             "type": "color",
@@ -123,9 +141,9 @@
           "nl": "Stroboscoop"
         },
         "titleFormatted": {
-            "en": "Stroboscope [[color_1]] [[color_2]]",
-            "nl": "Stroboscoop [[color_1]] [[color_2]]"
-          },
+          "en": "Stroboscope [[color_1]] [[color_2]]",
+          "nl": "Stroboscoop [[color_1]] [[color_2]]"
+        },
         "args": [
           {
             "type": "color",
@@ -152,9 +170,9 @@
           "nl": "Vuurtoren"
         },
         "titleFormatted": {
-            "en": "Lighthouse [[color_1]] [[color_2]]",
-            "nl": "Vuurtoren [[color_1]] [[color_2]]"
-          },
+          "en": "Lighthouse [[color_1]] [[color_2]]",
+          "nl": "Vuurtoren [[color_1]] [[color_2]]"
+        },
         "args": [
           {
             "type": "color",
@@ -181,9 +199,9 @@
           "nl": "Zoeklicht"
         },
         "titleFormatted": {
-            "en": "Searchlight [[color_1]] [[color_2]]",
-            "nl": "Zoeklicht [[color_1]] [[color_2]]"
-          },
+          "en": "Searchlight [[color_1]] [[color_2]]",
+          "nl": "Zoeklicht [[color_1]] [[color_2]]"
+        },
         "args": [
           {
             "type": "color",
@@ -210,9 +228,9 @@
           "nl": "Vlinder"
         },
         "titleFormatted": {
-            "en": "Butterfly [[color_1]] [[color_2]]",
-            "nl": "Vlinder [[color_1]] [[color_2]]"
-          },
+          "en": "Butterfly [[color_1]] [[color_2]]",
+          "nl": "Vlinder [[color_1]] [[color_2]]"
+        },
         "args": [
           {
             "type": "color",
