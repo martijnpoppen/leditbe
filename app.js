@@ -1,139 +1,59 @@
-'use strict';
-
-const Homey = require( 'homey' );
-const Generator = require('./lib/generator.js');
-const Helper = require('./lib/helper.js');
-
-const { ManagerSettings } = Homey;
+const Homey = require('homey');
+const { createSolidAnimation } = require('./lib/generators');
+const { getAnimationConf } = require('./lib/helpers');
+const actions = require('./lib/flow/actions');
 
 const LAST_SETTING_KEY = 'last_animation_frames';
 
 class LedItBe extends Homey.App {
-	onInit() {
-		var self = this;
+    log() {
+        console.log.bind(this, '[log]').apply(this, arguments);
+    }
 
-		// Restore last used screensaver animation config.
-		let lastAnimationFrames = ManagerSettings.get(LAST_SETTING_KEY);
-		if (lastAnimationFrames == null) {
-			lastAnimationFrames = Generator.createSolidAnimation( { r: 0, g: 100, b: 0 } );
-		}
-		self.registerAnimation(lastAnimationFrames);
+    error() {
+        console.error.bind(this, '[error]').apply(this, arguments);
+    }
 
-		// Register actions.
-		let solidAction = new Homey.FlowCardAction('solid');
-		solidAction
-			.register()
-			.registerRunListener((args, state) => {
-				let rgb = Helper.hexToRgb(args.color);
-				return self.registerAnimation(Generator.createSolidAnimation(rgb));
-			})
-		;
+    // -------------------- INIT ----------------------
 
-		let flashAction = new Homey.FlowCardAction('flash');
-		flashAction
-			.register()
-			.registerRunListener((args, state) => {
-				let rgb_1 = Helper.hexToRgb(args.color_1);
-				let rgb_2 = Helper.hexToRgb(args.color_2);
-				return self.registerAnimation(Generator.createFlashAnimation(rgb_1, rgb_2));
-			})
-		;
+    async onInit() {
+        try {
+            this.log(`${this.homey.manifest.id} - ${this.homey.manifest.version} started...`);
 
-		let stroboscopeAction = new Homey.FlowCardAction('stroboscope');
-		stroboscopeAction
-			.register()
-			.registerRunListener((args, state) => {
-				let rgb_1 = Helper.hexToRgb(args.color_1);
-				let rgb_2 = Helper.hexToRgb(args.color_2);
-				return self.registerAnimation(Generator.createStroboscopeAnimation(rgb_1, rgb_2));
-			})
-		;
+            await this.initSettings();
+            actions.init(this.homey);
+        } catch (error) {
+            this.homey.app.log(error);
+        }
+    }
 
-		let lighthouseAction = new Homey.FlowCardAction('lighthouse');
-		lighthouseAction
-			.register()
-			.registerRunListener((args, state) => {
-				let rgb_1 = Helper.hexToRgb(args.color_1);
-				let rgb_2 = Helper.hexToRgb(args.color_2);
-				return self.registerAnimation(Generator.createLighthouseAnimation(rgb_1, rgb_2));
-			})
-		;
+    async initSettings() {
+        this.animation = undefined;
 
-		let searchlightAction = new Homey.FlowCardAction('searchlight');
-		searchlightAction
-			.register()
-			.registerRunListener((args, state) => {
-				let rgb_1 = Helper.hexToRgb(args.color_1);
-				let rgb_2 = Helper.hexToRgb(args.color_2);
-				return self.registerAnimation(Generator.createSearchlightAnimation(rgb_1, rgb_2));
-			})
-		;
+        let lastAnimationFrames = this.homey.settings.get(LAST_SETTING_KEY);
 
-		let butterflyAction = new Homey.FlowCardAction('butterfly');
-		butterflyAction
-			.register()
-			.registerRunListener((args, state) => {
-				let rgb_1 = Helper.hexToRgb(args.color_1);
-				let rgb_2 = Helper.hexToRgb(args.color_2);
-				return self.registerAnimation(Generator.createButterflyAnimation(rgb_1, rgb_2));
-			})
-		;
+        if (lastAnimationFrames == null) {
+            lastAnimationFrames = createSolidAnimation({ r: 0, g: 100, b: 0 });
+        }
 
-		self.log('Application is running.');
-	}
+        await this.registerAnimation(lastAnimationFrames);
+    }
 
-	registerAnimation(frames) {
-		var self = this;
+    async registerAnimation(frames) {
+        this.homey.settings.set(LAST_SETTING_KEY, frames);
 
-		ManagerSettings.set(LAST_SETTING_KEY, frames);
+        if (this.animation != undefined) {
+            this.log('Updating frames ...');
+            return await this.animation.updateFrames(frames);
+        } else {
+            this.log('Registering animation ...');
+            this.animation = await this.homey.ledring.createAnimation(getAnimationConf(frames));
 
-		let result = new Promise((resolve) => setTimeout(resolve, 1000));
-		if (self.animation != undefined) {
-			result = result
-				.then(() => {
-					self.log("Updating frames ...");
-					return self.animation.updateFrames(frames);
-				})
-				.then(() => {
-					self.log("Done.");
-				});
-		} else {
-			self.animation = new Homey.LedringAnimation(self.getAnimationConf(frames));
-			result = result
-				.then(() => {
-					self.log("Registering animation ...");
-					return self.animation.register();
-				})
-				.then(() => {
-					self.log("Done.");
-					self.log("Registering screensaver ...");
-					return self.animation.registerScreensaver( 'leditbe' );
-				})
-				.then(() => {
-					self.log("Done.");
-				});
-		}
+            this.log('Registering screensaver ...');
 
-		return result
-			.catch(error => {
-				self.log('Failure.');
-				self.log(error);
-			});
-	}
-
-	getAnimationConf(frames) {
-		return {
-			options: {
-				fps: 12,
-				tfps: 24,
-				rpm: 0
-			},
-			frames: frames,
-			duration: false,
-			transition: 300,
-			priority: 'INFORMATIVE'
-		}
-	}
+            return await this.homey.ledring.registerScreensaver('leditbe', this.animation);
+        }
+    }
 }
 
 module.exports = LedItBe;

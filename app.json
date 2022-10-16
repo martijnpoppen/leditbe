@@ -1,11 +1,9 @@
 {
   "id": "nl.fellownet.leditbe",
   "version": "1.0.6",
-  "compatibility": ">=1.5.0",
-  "sdk": 2,
-  "platforms": [
-    "local"
-  ],
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": ["local"],
   "brandColor": "#000000",
   "name": {
     "en": "Led It Be",
@@ -16,27 +14,11 @@
     "nl": "Voegt een screensaver aam je Homey toe welke geconfigureerd kan worden door middel van flows."
   },
   "tags": {
-    "en": [
-      "led",
-      "ledring",
-      "ring",
-      "screensaver",
-      "animation"
-    ],
-    "nl": [
-      "led",
-      "ledring",
-      "ring",
-      "screensaver",
-      "animation"
-    ]
+    "en": ["led", "ledring", "ring", "screensaver", "animation"],
+    "nl": ["led", "ledring", "ring", "screensaver", "animation"]
   },
-  "category": [
-    "tools"
-  ],
-  "permissions": [
-    "homey:manager:ledring"
-  ],
+  "category": ["tools"],
+  "permissions": ["homey:manager:ledring"],
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
@@ -69,15 +51,18 @@
     "donate": {
       "paypal": {
         "username": "martijnpoppen"
+      },
+      "bunq": {
+        "username": "martijnpoppen"
       }
     }
   },
   "bugs": {
-    "url": "https://community.homey.app/64674"
+    "url": "https://community.homey.app/t/app-pro-led-it-be/64674"
   },
   "source": "https://github.com/martijnpoppen/leditbe",
   "homeyCommunityTopicId": 64674,
-  "support": "https://community.homey.app/64674",
+  "support": "https://community.homey.app/t/app-pro-led-it-be/64674",
   "drivers": [],
   "flow": {
     "actions": [
@@ -87,6 +72,10 @@
           "en": "Solid color",
           "nl": "Vaste kleur"
         },
+        "titleFormatted": {
+            "en": "Solid color [[color]]",
+            "nl": "Vaste kleur [[color]]"
+          },
         "args": [
           {
             "type": "color",
@@ -104,6 +93,10 @@
           "en": "Flash",
           "nl": "Flits"
         },
+        "titleFormatted": {
+            "en": "Flash [[color_1]] [[color_2]]",
+            "nl": "Flits [[color_1]] [[color_2]]"
+          },
         "args": [
           {
             "type": "color",
@@ -129,6 +122,10 @@
           "en": "Stroboscope",
           "nl": "Stroboscoop"
         },
+        "titleFormatted": {
+            "en": "Stroboscope [[color_1]] [[color_2]]",
+            "nl": "Stroboscoop [[color_1]] [[color_2]]"
+          },
         "args": [
           {
             "type": "color",
@@ -154,6 +151,10 @@
           "en": "Lighthouse",
           "nl": "Vuurtoren"
         },
+        "titleFormatted": {
+            "en": "Lighthouse [[color_1]] [[color_2]]",
+            "nl": "Vuurtoren [[color_1]] [[color_2]]"
+          },
         "args": [
           {
             "type": "color",
@@ -179,6 +180,10 @@
           "en": "Searchlight",
           "nl": "Zoeklicht"
         },
+        "titleFormatted": {
+            "en": "Searchlight [[color_1]] [[color_2]]",
+            "nl": "Zoeklicht [[color_1]] [[color_2]]"
+          },
         "args": [
           {
             "type": "color",
@@ -204,6 +209,10 @@
           "en": "Butterfly",
           "nl": "Vlinder"
         },
+        "titleFormatted": {
+            "en": "Butterfly [[color_1]] [[color_2]]",
+            "nl": "Vlinder [[color_1]] [[color_2]]"
+          },
         "args": [
           {
             "type": "color",
