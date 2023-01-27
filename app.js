@@ -4,6 +4,7 @@ const { getAnimationConf } = require('./lib/helpers');
 const actions = require('./lib/flow/actions');
 
 const LAST_SETTING_KEY = 'last_animation_frames';
+const Homey2023 = Homey.platform === 'local' && Homey.platformVersion === 2;
 
 class LedItBe extends Homey.App {
     log() {
@@ -18,12 +19,24 @@ class LedItBe extends Homey.App {
 
     async onInit() {
         try {
-            this.log(`${this.homey.manifest.id} - ${this.homey.manifest.version} started...`);
+            if (!Homey2023) {
+                this.log(`${this.homey.manifest.id} - ${this.homey.manifest.version} started...`);
 
-            await this.initSettings();
-            actions.init(this.homey);
+                const getLanguage = this.homey.i18n.getLanguage();
+
+                this.currentLang = getLanguage === 'nl' ? 'nl' : 'en';
+
+                await this.initSettings();
+                actions.init(this.homey);
+            } else {
+                this.log(`${this.homey.manifest.id} - ${this.homey.manifest.version} not started...`);
+
+                await this.homey.notifications.createNotification({
+                    excerpt: `${this.homey.manifest.name.en} doesn't work on Homey 2023`
+                });
+            }
         } catch (error) {
-            this.homey.app.log(error);
+            this.log(error);
         }
     }
 
