@@ -19,5 +19,8 @@
   },
   "2.0.3": {
     "en": "FIX: typo"
+  },
+  "2.0.4": {
+    "en": "FIX: prevent install on Homey 2023"
   }
 }

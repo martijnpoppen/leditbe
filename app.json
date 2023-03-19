@@ -1,7 +1,7 @@
 {
   "id": "nl.fellownet.leditbe",
-  "version": "2.0.3",
-  "compatibility": ">=5.0.0",
+  "version": "2.0.4",
+  "compatibility": ">=5.0.0 < 10.0.0",
   "sdk": 3,
   "platforms": [
     "local"
