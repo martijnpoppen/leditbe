@@ -22,5 +22,8 @@
   },
   "2.0.4": {
     "en": "FIX: prevent install on Homey 2023"
+  },
+  "2.0.5": {
+    "en": "FIX: compatibility "
   }
 }
