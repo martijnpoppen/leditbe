@@ -4,7 +4,6 @@ const { getAnimationConf } = require('./lib/helpers');
 const actions = require('./lib/flow/actions');
 
 const LAST_SETTING_KEY = 'last_animation_frames';
-const Homey2023 = Homey.platform === 'local' && Homey.platformVersion === 2;
 
 class LedItBe extends Homey.App {
     log() {
@@ -19,6 +18,8 @@ class LedItBe extends Homey.App {
 
     async onInit() {
         try {
+            const Homey2023 = this.homey.platformVersion === 2;
+
             if (!Homey2023) {
                 this.log(`${this.homey.manifest.id} - ${this.homey.manifest.version} started...`);
 
