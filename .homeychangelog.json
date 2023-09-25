@@ -25,5 +25,8 @@
   },
   "2.0.5": {
     "en": "FIX: compatibility "
+  },
+  "2.0.6": {
+    "en": "FIX: install on HP19 | NEW: add platformFeatures, to prevent install on HP23 in the future"
   }
 }
