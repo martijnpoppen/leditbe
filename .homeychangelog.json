@@ -28,5 +28,8 @@
   },
   "2.0.6": {
     "en": "FIX: install on HP19 | NEW: add platformFeatures, to prevent install on HP23 in the future"
+  },
+  "2.1.0": {
+    "en": " NEW: add platformLocalRequiredFeatures -> prevent install on HP23"
   }
 }

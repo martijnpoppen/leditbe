@@ -1,15 +1,15 @@
 {
   "id": "nl.fellownet.leditbe",
-  "version": "2.0.6",
+  "version": "2.1.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#000000",
   "platforms": [
     "local"
   ],
-  "platformFeatures": {
-    "ledring": "required"
-  },
+  "platformLocalRequiredFeatures": [
+    "ledring"
+  ],
   "name": {
     "en": "Led It Be",
     "nl": "Led It Be"
